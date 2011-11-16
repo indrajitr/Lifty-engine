@@ -17,6 +17,6 @@ libraryDependencies += "org.fusesource.scalate" % "scalate-core" % "1.5.3"
 pomPostProcess := {
     import xml._
     Rewrite.rewriter {
-        case e: Elem if e.label == "classifier" && e.child.mkString == "sources" => NodeSeq.Empty
+        case e: Elem if e.label == "classifier" => NodeSeq.Empty
     }
 }
